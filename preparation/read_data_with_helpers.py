@@ -99,11 +99,6 @@ def save_jsons_as_csv(path, data_purpose, helper):
         df = pd.concat([df, dataframe])
 
     df = missing_to_default(df, helper)
-#    existing_cols = [col for col in helper["Spalte"] if col in dataset.columns] 
-#    for col, default in zip(helper["Spalte"], helper["Default"]):
-#        if col not in existing_cols:
-#            dataset[col] = default
-#        dataset[col] = dataset[col].fillna(default)   
 
     features = pd.read_csv(f"{path}\\features.txt", sep=",")
     features = features.rename(columns={features.columns[0]: "instance"})
@@ -115,7 +110,7 @@ def save_jsons_as_csv(path, data_purpose, helper):
 
 def add_missing_dummies(direc):
     train = pd.read_csv(f"{direc}\\data_train.csv", sep=";")
-    #traintest = pd.read_csv(f"{direc}\\data_traintest.csv", sep=";")
+    traintest = pd.read_csv(f"{direc}\\data_traintest.csv", sep=";")
     val = pd.read_csv(f"{direc}\\data_val.csv", sep=";")
 
     for data in [train, traintest, val]:
@@ -130,6 +125,7 @@ def add_missing_dummies(direc):
     traintest.to_csv(f"{direc}\\data_traintest.csv", sep=";", index=False)
     val.to_csv(f"{direc}\\data_val.csv", sep=";", index=False)
 
+
 def fill_missing_dummies(d1, d2, d3, path, helper):
     for data, purpose in zip([d1, d2, d3], ["data_train", "data_traintest", "data_val"]):
         dummies = [col for col in data.columns if col not in helper["Spalte"] and col != "time"]
@@ -142,11 +138,14 @@ def fill_missing_dummies(d1, d2, d3, path, helper):
         print(f"{purpose}: {data.isna().sum().sum()} & shape: {data.shape}")
 
 
-infos = { "dirs":["./Minisat/Daten",        #"./ProbSAT-7SAT/Daten",
+
+
+####################
+infos = { "dirs":["./Minisat/Daten",        "./ProbSAT-7SAT/Daten",
                   "./Clasp-Rooks/Daten",    "./Lingeling-CF/Daten",
                   "./CPLEX-RCW2/Daten",     "./CPLEX-Regions/Daten"
                   ],
-        "hpaths":["helper_minisat",         #"helper_probsat",
+        "hpaths":["helper_minisat",         "helper_probsat",
                   "helper_clasp-rooks",     "helper_lingeling_circuitfuzz",
                   "helper_cplex_rcw",       "helper_cplex_regions200"
                   ]
