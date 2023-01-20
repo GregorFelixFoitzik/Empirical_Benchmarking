@@ -16,3 +16,6 @@ Die Date final_ann_(...).py beinhaltet die beste Konfiguration unter den geteste
 
 
 Funktionen für das Einlesen sowie Aufbereiten der Daten befinden sich im Ordner "preparation".
+
+Aufgrund eines begrenzten Speicherplatzes befinden sich in den zip-Dateien die aufbereiteten train- und test-Datensätze.
+Mittels der read_data_with_helpers.py können die traintest-Datensätze generiert werden. 
