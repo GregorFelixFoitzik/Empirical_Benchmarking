@@ -99,11 +99,6 @@ def save_jsons_as_csv(path, data_purpose, helper):
         df = pd.concat([df, dataframe])
 
     df = missing_to_default(df, helper)
-#    existing_cols = [col for col in helper["Spalte"] if col in dataset.columns] 
-#    for col, default in zip(helper["Spalte"], helper["Default"]):
-#        if col not in existing_cols:
-#            dataset[col] = default
-#        dataset[col] = dataset[col].fillna(default)   
 
     features = pd.read_csv(f"{path}\\features.txt", sep=",")
     features = features.rename(columns={features.columns[0]: "instance"})
@@ -115,7 +110,7 @@ def save_jsons_as_csv(path, data_purpose, helper):
 
 def add_missing_dummies(direc):
     train = pd.read_csv(f"{direc}\\data_train.csv", sep=";")
-    #traintest = pd.read_csv(f"{direc}\\data_traintest.csv", sep=";")
+    traintest = pd.read_csv(f"{direc}\\data_traintest.csv", sep=";")
     val = pd.read_csv(f"{direc}\\data_val.csv", sep=";")
 
     for data in [train, traintest, val]:
