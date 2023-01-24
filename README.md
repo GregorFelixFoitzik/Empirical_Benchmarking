@@ -16,6 +16,16 @@ Festgelegte Parameter:
 - learning_rate = 0.001
 - epochs = 250
 
+Hypertuning der Paramter (Parameterwerte):
+- Anzahl der hidden layer (2, 5, 10)
+- Anzahl der Neuronen pro hidden layer (#feature*1, #feature*2, #feature*3)
+
+- Dropout layer (True, False)
+	- True
+		+ Dropout nach input layer mit Wahrscheinlichkeit von 20%
+		+ Dropout nach jedem hidden layer mit Wahrscheinlichkeit von 50%
+	- False: Keine dropout layer
+
 
 
 Mit der Datei hpt_outcome.py kann die Bestimmung der final verwendeten Konfiguration nachvollzogen werden. 
