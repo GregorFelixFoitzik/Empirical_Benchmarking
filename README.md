@@ -38,12 +38,19 @@ Hypertuning der Paramter (Parameterwerte):
 	- False: Keine dropout layer
 
 
+### Erklärung der final_nn_(...).py Dateien und Bestimmung der finalen Konfiguration:
+Die berechneten Verlustfunktionen und RMSE logPR10 runtimes für jede getesete Architektur und jede Epoche wurden in einer .csv-Datei gespeichert (hpt.csv), welche sich ebenfalls im zip-Ordner befindet.
 
+In den Dateien final_nn_(...).py wurden mit den ausgewählten Parametern die neuronalen Netze trainiert und in .pth-Dateien abgespeichert.
+
+
+### Grafiken generieren
 Mit der Datei hpt_outcome.py kann die Bestimmung der final verwendeten Konfiguration nachvollzogen werden. 
-Zudem werden Bilder generiert, die die logarithmierte Verlustfunktion über die Epochen darstellt.
+Zudem werden zwei Grafiken generiert, welche die logarithmierte Verlustfunktion über die Epochen darstellt.
 
-Die Date final_ann_(...).py beinhaltet die beste Konfiguration unter den getesten. 
-	Dazu speichert die Datei das trainierte NN, sodass es unmittelbar eingesetzt werden kann. 
+Um die Grafiken zu generieren müssen die zip-Ordner entpackt werden. 
+Nur wenn der entpackte Ordner nicht in dem Ordner des Algorithmus abgelegt wird muss der Pfad der Datei angepasst werden.
 
 
+###
 Funktionen für das Einlesen sowie Aufbereiten der Daten befinden sich im Ordner "preparation".
