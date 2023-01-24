@@ -6,7 +6,7 @@ In diesem Ordner befindet sich ein zip-Datei, welche die verwendeten csv-Dateien
 Dazu zählen zwei aufbereitete Datensätzen. 
 Ein Datensatz für das Trainieren und Hypertuning der Architektur und ein Datensatz, um die Güte des Netzwerks zu evaluieren.
 
-##### Erklärung der eval_ann_(...).py Datein:
+#### Erklärung der eval_ann_(...).py Datein:
 Die Datei  wurde für das Hypertuning der Architektur verwendet. Aus dem Code kann entnommen werden, welche Einstellungen und Parameter getestet wurden.
 Festgelegte Parameter:
 - Criterion: Mean Squared Error
@@ -22,8 +22,8 @@ Hypertuning der Paramter (Parameterwerte):
 
 - Dropout layer (True, False)
 	- True
-		+ Dropout nach input layer mit Wahrscheinlichkeit von 20%
-		+ Dropout nach jedem hidden layer mit Wahrscheinlichkeit von 50%
+		- Dropout nach input layer mit Wahrscheinlichkeit von 20%
+		- Dropout nach jedem hidden layer mit Wahrscheinlichkeit von 50%
 	- False: Keine dropout layer
 
 
