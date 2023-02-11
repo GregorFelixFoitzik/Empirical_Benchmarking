@@ -1,0 +1,11 @@
+﻿Spalte;Default;DataType;Condition;LogScale
+luby;0;OneHot;?;0
+rfirst;100;OneHot;luby_in_{1};0
+K-val;0.8;OneHot;luby_in_{0};0
+R-val;1.4;OneHot;luby_in_{0};0
+lbd-cut;5;OneHot;?;0
+lbd-cut-max;10;OneHot;?;0
+cp-increase;15000;OneHot;?;0
+core-tolerance;0.02;OneHot;?;0
+cla-decay;0.999;OneHot;?;0
+ccmin-mode;2;OneHot;?;0
