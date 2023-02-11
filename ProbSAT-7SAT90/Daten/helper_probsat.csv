@@ -1,0 +1,10 @@
+﻿Spalte;Default;DataType;LogScale;Condition
+cb1;2.3;Float;0;?
+cb2;1;Float;0;caching_in_{0}#fct_in_{1}
+fct;1;OneHot;0;?
+eps;1;Float;0;fct_in_{0}
+caching;1;OneHot;0;?
+randomc;1;OneHot;0;?
+xor;1;OneHot;0;caching_in_{1}
+luby;0;OneHot;0;?
+base;500000;Integer;1;luby_in_{1}
